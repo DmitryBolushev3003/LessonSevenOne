@@ -28,7 +28,7 @@ public class statsServiceTest {
         statsService service = new statsService();
         int Max[] = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedMax = 6;
+        int expectedMax = 8;
         int actualMax = service.gitNumberMax(Max);
         Assertions.assertEquals(expectedMax, actualMax);
     }

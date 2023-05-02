@@ -25,27 +25,27 @@ public class statsService {
         int salesMax = 0;
         for (int i = 0; i < Max.length; i++) {
             if (Max[i] >= Max[salesMax]) {
-                salesMax = i + 1;
+                salesMax = i;
             }
         }
-        return salesMax;
+        return salesMax + 1;
     }
 
     public int gitNumberMin(int[] Min) {
         int salesMin = 0;
         for (int i = 0; i < Min.length; i++) {
             if (Min[i] <= Min[salesMin]) {
-                salesMin = i + 1;
+                salesMin = i;
             }
         }
-        return salesMin;
+        return salesMin + 1;
     }
 
     public int belowAverage(int[] below) {
         int belowAver = averageSalesAmount(below);
         int month = 0;
         for (int i = 0; i < below.length; i++) {
-            if (below[i] <= belowAver) {
+            if (below[i] < belowAver) {
                 month++;
             }
         }
@@ -56,7 +56,7 @@ public class statsService {
         int moreAver = averageSalesAmount(more);
         int month = 0;
         for (int i = 0; i < more.length; i++) {
-            if (more[i] <= moreAver) {
+            if (more[i] > moreAver) {
                 month++;
             }
         }
@@ -64,4 +64,9 @@ public class statsService {
 
 
     }
-}
+
+
+
+
+    }
+
